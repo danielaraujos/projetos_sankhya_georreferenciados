@@ -1,0 +1,23 @@
+<gadget>
+  <level id="lvl_aghwpxr" description="Principal">
+    <args>
+      <arg id="P_CODPROJ" type="integer"/>
+    </args>
+    <container orientacao="V" tamanhoRelativo="100">
+      <html5component id="html5_aghwpxs" entryPoint="maps.jsp"/>
+    </container>
+  </level>
+  <level id="lvl_ai5zxyj" description="teste">
+    <args>
+      <arg id="P_CODPROJ" type="integer"/>
+    </args>
+    <container orientacao="V" tamanhoRelativo="100">
+      <grid id="grd_ai5zxyk">
+        <expression type="sql" data-source="MGEDS"><![CDATA[SELECT IDENTIFICACAO FROM TCSPRJ WHERE CODPROJ = :P_CODPROJ]]></expression>
+        <metadata>
+          <field name="IDENTIFICACAO" label="IDENTIFICACAO" type="S" visible="true" useFooter="false"/>
+        </metadata>
+      </grid>
+    </container>
+  </level>
+</gadget>
